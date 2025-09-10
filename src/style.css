@@ -20,11 +20,11 @@ h2 {
 	@apply text-3xl font-bold md:text-5xl;
 }
 
-h2 {
+h3 {
 	@apply text-2xl font-bold;
 }
 
-h3 {
+h4 {
 	@apply text-base font-bold sm:text-lg;
 }
 
@@ -60,6 +60,7 @@ h3 {
 
 .bg_hero {
 	background-image: url(./images/hero_bg.jpg);
+	background-size: cover;
 }
 
 .coffee_pattern {

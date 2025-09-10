@@ -18,7 +18,7 @@
 </head>
 
 <body class="max-w-[1920px] mx-auto bg-white text-green-950 text-sm">
-  <header id="navbar" class="text-black lg:text-white">
+  <header id="navbar" class="sticky top-0 z-50 text-black lg:text-white">
     <nav class="max-w-[1920px]">
       <!-- Mobile/Sticky Menu -->
       <div id="sticky_menu" class="fixed w-full top-0 left-0 to-zinc-500 lg:top-[-100%] duration-500">
@@ -99,7 +99,7 @@
             </ul>
           </div>
 
-          <div class="flex-1">
+          <div class="flex-1 lg:hidden">
             <img src="/src/images/logo.png" alt="logo" class="w-20 mx-auto">
           </div>
 
@@ -118,7 +118,7 @@
             </ul>
           </div>
         </div>
-        <div class="flex items-center justify-center mt-10">
+        <div class="flex items-center justify-center mt-10 lg:hidden">
           <div class="flex justify-center gap-6">
             <a href="#home" class="nav-link active">Home</a>
             <a href="#about" class="nav-link">About</a>
@@ -134,7 +134,7 @@
   <main>
     <!-- ~~~~~~~~~~~~  HOME  ~~~~~~~~~~~~~ -->
     <div id="home" class="lg:-mt-44">
-      <div class="bg_hero bg-cover">
+      <div class="bg_hero">
         <div
           class="container pt-40 pb-[40%] flex flex-col justify-center items-center gap-4 text-center md:pb-[30%] lg:pt-72 lg:gap-5 lg:max-w-3xl lg:pb-[25%] xl:max-w-5xl xl:pb-[20%]">
           <h1 class="text-green-700">Organic</h1>
@@ -289,9 +289,9 @@
 
         <div
           class="flex flex-col items-center text-center max-w-sm mx-auto px-3 md:text-start md:items-center md:mx-12 md:max-w-md">
-          <h2 class="text-black xl:text-6xl">Unmatched</h2>
+          <h2 class="text-black xl:text-7xl">Unmatched</h2>
 
-          <h2 class="text-white leading-tight xl:text-6xl">Fragrance in Each Sip</h2>
+          <h2 class="text-white leading-tight">Fragrance in Each Sip</h2>
 
           <p class="text-white pt-10 pb-20">Savor the bold richness of Organic Colombian Coffee, expertly crafted for a
             smooth
@@ -307,6 +307,87 @@
       <img src="/src/images/Fragrance_02.jpg" alt="fragrance_image" class="hidden lg:block w-1/3 object-cover">
 
 
+    </section>
+
+    <!-- ~~~~~~~~~~~ QUALITY ~~~~~~~~~~~ -->
+    <section id="quality" class="container">
+      <div class="flex flex-col lg:flex-row xl:items-center">
+        <!-- left side -->
+        <div class="flex flex-col gap-12 xl:w-1/4 xl:gap-20">
+          <!-- item 1 -->
+          <div class="flex items-start gap-5">
+            <img src="/src/images/quality_01.png" alt="quality_image" class="w-20">
+
+            <div>
+              <h4>Pure Grades</h4>
+              <p>Enjoy the rich, bold flavor of Organic Colombian Coffee, meticulously crafted for a smooth and
+                satisfying experience.</p>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div class="flex items-start gap-5">
+            <img src="/src/images/quality_02.png" alt="quality_image" class="w-20">
+
+            <div>
+              <h4>Wide Assortment</h4>
+              <p>Enjoy the rich, bold flavor of Organic Colombian Coffee, meticulously crafted for a smooth and
+                satisfying experience.</p>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="flex items-start gap-5">
+            <img src="/src/images/quality_03.png" alt="quality_image" class="w-20">
+
+            <div>
+              <h4>Proper Roasting
+              </h4>
+              <p>Enjoy the rich, bold flavor of Organic Colombian Coffee, meticulously crafted for a smooth and
+                satisfying experience.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hidden xl:w-1/2 xl:grid xl:place-items-center">
+          <img src="/src/images/cup.png" alt="quality_cup" class="w-[70%]">
+        </div>
+        <!-- right side -->
+        <div class="flex flex-col gap-12 pt-12 lg:pt-0 xl:w-1/4 xl:gap-20">
+          <!-- item 1 -->
+          <div class="flex items-start gap-5 lg:flex-row-reverse">
+            <img src="/src/images/quality_04.png" alt="quality_image" class="w-20">
+
+            <div class="lg:text-end">
+              <h4>High Quality</h4>
+              <p>Enjoy the rich, bold flavor of Organic Colombian Coffee, meticulously crafted for a smooth and
+                satisfying experience.</p>
+            </div>
+          </div>
+
+          <!-- item 2 -->
+          <div class="flex items-start gap-5 lg:flex-row-reverse">
+            <img src="/src/images/quality_05.png" alt="quality_image" class="w-20">
+
+            <div class="lg:text-end">
+              <h4>Excellent Grinding</h4>
+              <p>Enjoy the rich, bold flavor of Organic Colombian Coffee, meticulously crafted for a smooth and
+                satisfying experience.</p>
+            </div>
+          </div>
+
+          <!-- item 3 -->
+          <div class="flex items-start gap-5 lg:flex-row-reverse">
+            <img src="/src/images/quality_06.png" alt="quality_image" class="w-20">
+
+            <div class="lg:text-end">
+              <h4>Awesome Aroma</h4>
+              <p>Enjoy the rich, bold flavor of Organic Colombian Coffee, meticulously crafted for a smooth and
+                satisfying experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main>
