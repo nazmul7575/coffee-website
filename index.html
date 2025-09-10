@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Website || TailwindCSS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body class="max-w-[1920px] mx-auto bg-white text-green-950 text-sm">
+  <header id="navbar" class="text-black lg:text-white">
+    <nav class="max-w-[1920px]">
+      <!-- Mobile/Sticky Menu -->
+      <div id="sticky_menu" class="fixed w-full top-0 left-0 to-zinc-500 lg:top-[-100%] duration-500">
+        <div class="flex items-center justify-between h-24 px-5 md:px-10 lg:max-w-4xl lg:mx-auto">
+          <!-- emty div -->
+          <div class="flex-1 text-white lg:hidden">Hello world</div>
+
+          <div class="flex-1 grid place-items-center lg:place-items-start">
+            <img src="/src/images/logo.png" alt="logo" class="w-20">
+          </div>
+
+          <div id="nav_menu"
+            class="absolute top-0 right-[-100%] min-h-[70vh] w-full px-5 bg-white flex flex-col gap-5 duration-500 ease-out overflow-hidden md:px-10 lg:static lg:min-h-fit lg:bg-transparent lg:w-auto">
+            <div class="flex items-center justify-between h-24 lg:hidden">
+              <img src="/src/images/logo_2.png" alt="logo_2" class="w-20">
+              <div id="closeicon" class="text-3xl cursor-pointer">
+                <i class="ri-close-large-line"></i>
+              </div>
+            </div>
+            <ul class="flex flex-col items-start gap-5 lg:flex-row">
+              <li><a href="#home" class="nav-link active">Home</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#fragrance" class=" nav-link">Fragrance</a></li>
+              <li><a href="#quality" class="nav-link">Quality</a></li>
+              <li><a href="#ptoducts" class="nav-link">Products</a></li>
+            </ul>
+
+            <!-- social icons -->
+            <div class="flex items-center py-10 lg:hidden">
+              <p class="font-bold">Follow us <span class="ml-3 mr-5">-</span></p>
+
+              <ul class="nav_icon_mobile flex space-x-4">
+                <li class="border-2 border-black h-8 w-8 rounded-full grid place-items-center">
+                  <a href="#"><i class="ri-twitter-x-line"></i></a>
+                </li>
+                <li class="border-2 border-black h-8 w-8 rounded-full grid place-items-center">
+                  <a href="#"><i class="ri-facebook-fill"></i></a>
+                </li>
+                <li class="border-2 border-black h-8 w-8 rounded-full grid place-items-center">
+                  <a href="#"><a href="#"><i class="ri-instagram-line"></i></a></a>
+                </li>
+                <li class="border-2 border-black h-8 w-8 rounded-full grid place-items-center">
+                  <a href="#"><a href="#"><i class="ri-youtube-fill"></i></a></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="absolute bottom-16 -right-5 -rotate-[30deg] opacity-20 pointer-events-none lg:hidden">
+              <img src="/src/images/coffee_leaf.png" alt="bg_leaf" class="w-72">
+            </div>
+          </div>
+
+          <div class="flex-1 text-white text-3xl cursor-pointer text-right lg:hidden">
+            <i class="ri-menu-4-line" id="hamburger"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Desktop Menu -->
+      <div class="hidden lg:block py-4">
+        <div class="container flex items-center justify-center">
+          <!-- social icons -->
+          <div class="flex-1 flex items-center">
+            <p class="font-bold">Follow us <span class="ml-3 mr-5">-</span></p>
+
+            <ul class="nav_icons flex space-x-4">
+              <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                <a href="#" class="text-green-700"><i class="ri-twitter-x-line"></i></a>
+              </li>
+              <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                <a href="#" class="text-green-700"><i class="ri-facebook-fill"></i></a>
+              </li>
+              <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                <a href="#" class="text-green-700"><i class="ri-instagram-line"></i></a>
+              </li>
+              <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                <a href="#" class="text-green-700"><i class="ri-youtube-fill"></i></a></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex-1">
+            <img src="/src/images/logo.png" alt="logo" class="w-20 mx-auto">
+          </div>
+
+          <div class="flex-1 flex items-center justify-end">
+            <ul class="nav_icons flex space-x-8">
+              <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                <a href="#" class="text-green-700"><i class="ri-user-fill"></i></a>
+              </li>
+              <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                <a href="#" class="relative text-green-700"><i class="ri-shopping-bag-fill"></i><span
+                    class="font-bold absolute -top-2 -right-6 bg-white text-black text-sm w-6 h-6 rounded-full grid place-items-center">0</span></a>
+              </li>
+              <li class="border-2 border-green-900 h-8 w-8 rounded-full grid place-items-center">
+                <a href="#" class="text-green-700"><i class="ri-search-line"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex items-center justify-center mt-10">
+          <div class="flex justify-center gap-6">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#fragrance" class=" nav-link">Fragrance</a>
+            <a href="#ptoducts" class="nav-link">Products</a>
+          </div>
+        </div>
+      </div>
+
+    </nav>
+
+  </header>
+  <main>
+    <!-- ~~~~~~~~~~~~  HOME  ~~~~~~~~~~~~~ -->
+    <div id="home" class="lg:-mt-44">
+      <div class="bg_hero bg-cover">
+        <div
+          class="container pt-40 pb-[40%] flex flex-col justify-center items-center gap-4 text-center md:pb-[30%] lg:pt-72 lg:gap-5 lg:max-w-3xl lg:pb-[25%] xl:max-w-5xl xl:pb-[20%]">
+          <h1 class="text-green-700">Organic</h1>
+          <h1 class="text-white">Colombian Coffee</h1>
+          <p class="text-white mt-5 lobster">Experience the rich essence of Colombia with a coffee crafted to
+            perfection.
+            Smooth and
+            bold, each sip
+            delivers a unique blend of flavor and aroma that awakens your senses.
+          </p>
+        </div>
+      </div>
+      <div class="relative bg-green-800 coffee_pattern bg-repeat bg-[length:400px_400px]">
+        <div class="relative w-full h-0 pb-[50%] md:pb-[45%] lg:pb-[35%] xl:pb-0 xl:h-[450px]">
+          <img src="/src/images/coffee-bean.png" alt="coffee_bean"
+            class="absolute -top-1/2 left-1/2 transform -translate-x-1/2 w-[90%] sm:w-[80%] lg:w-[700px] xl:w-[750px]">
+        </div>
+      </div>
+    </div>
+
+    <!-- ~~~~~~~~~~~  ABOUT  ~~~~~~~~~~~ -->
+    <section id="about" class="container flex flex-col gap-20 lg:flex-row">
+      <div class="lg:w-1/2">
+        <div class="flex flex-col text-center md:gap-2 lg:text-start">
+          <h2 class="text-green-700">Caturra & Maragogipe</h2>
+          <h2>Boutique Plantation Coffee</h2>
+          <p class="mt-5">The smooth richness of Organic Colombian Coffee is perfectly balanced, offering a deep, bold
+            flavor with a
+            hint of sweetness. Enjoy the harmonious blend that awakens your senses with every sip.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center gap-2 py-10 lg:items-start">
+          <div class="flex items-center gap-5 font-bold">
+            <i class="ri-file-list-2-fill text-2xl text-green-700"></i>
+            <p>Download price</p>
+          </div>
+
+          <div class="flex items-center gap-5 font-bold">
+            <i class="ri-phone-fill text-2xl text-green-700"></i>
+            <p>017-17-24-57-75</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center justify-center gap-5 md:flex-row xl:justify-start">
+          <button class="btn_primary">
+            <span class="relative z-10">Read More</span>
+          </button>
+
+          <button class="btn_secondary">
+            <span class="relative z-10">Read More</span>
+          </button>
+        </div>
+      </div>
+      <div class="relative lg:w-1/2">
+        <img src="/src/images/about_image.png" alt="about_image"
+          class="w-full mx-auto md:w-[80%] lg:w-full xl:w-[full]">
+
+        <div
+          class="absolute top-0 left-0 bg-white shadow-2xl h-40 w-40 rounded-full grid place-items-center text-center border-2 border-green-900 md:left-[20%] lg:h-44 lg:w-44">
+          <div>
+            <h3>since</h3>
+            <h2 class="text-green-700">1955</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ~~~~~~~~~~~  VARIETY  ~~~~~~~~~~~ -->
+    <section class="relative bg_image">
+      <div class="container relative z-10">
+        <h3 class="max-w-5xl text-center mx-auto">Experience the vibrant taste of Organic Colombian Coffee, crafted to
+          perfection with a <span class="text-green-700">smooth finish
+            and
+            rich aroma</span>.Its balanced notes offer a satisfying blend of flavor and freshness, making every cup
+          truly
+          exceptional.</h3>
+
+        <div class="mt-20 grid grid-cols-1 gap-14 md:grid-cols-2 xl:grid-cols-4">
+          <!-- item 1 -->
+          <div class="about__item flex flex-col gap-3 items-center justify-center text-center">
+            <div class="about__item__img relative h-60 w-60">
+              <img src="/src/images/coffee-1.jpg" alt="variety_image" class="rounded-full">
+
+              <h3
+                class="absolute -left-8 top-1/3 h-16 w-16 bg-green-800 grid place-items-center rounded-full text-white md:h-20 md:w-20 md:-left-10">
+                01</h3>
+
+            </div>
+            <h3>Arabica Green</h3>
+
+            <p>Enjoy the smooth, full-bodied flavor of Organic Colombian Coffee, perfectly balanced for a rich and
+              satisfying experience.</p>
+          </div>
+
+          <!-- item 2 -->
+          <div class="about__item flex flex-col gap-3 items-center justify-center text-center">
+            <div class="about__item__img relative h-60 w-60">
+              <img src="/src/images/coffee-2.jpg" alt="variety_image" class="rounded-full">
+
+              <h3
+                class="absolute -left-8 top-1/3 h-16 w-16 bg-green-800 grid place-items-center rounded-full text-white md:h-20 md:w-20 md:-left-10">
+                02</h3>
+
+            </div>
+            <h3>Arabica Roasted</h3>
+
+            <p>Enjoy the smooth, full-bodied flavor of Organic Colombian Coffee, perfectly balanced for a rich and
+              satisfying experience.</p>
+          </div>
+
+          <!-- item 3 -->
+          <div class="about__item flex flex-col gap-3 items-center justify-center text-center">
+            <div class="about__item__img relative h-60 w-60">
+              <img src="/src/images/coffee-3.jpg" alt="variety_image" class="rounded-full">
+
+              <h3
+                class="absolute -left-8 top-1/3 h-16 w-16 bg-green-800 grid place-items-center rounded-full text-white md:h-20 md:w-20 md:-left-10">
+                03</h3>
+
+            </div>
+            <h3>Robusta Roasted</h3>
+
+            <p>Enjoy the smooth, full-bodied flavor of Organic Colombian Coffee, perfectly balanced for a rich and
+              satisfying experience.</p>
+          </div>
+          <!-- item 4 -->
+          <div class="about__item flex flex-col gap-3 items-center justify-center text-center">
+            <div class="about__item__img relative h-60 w-60">
+              <img src="/src/images/coffee-4.jpg" alt="variety_image" class="rounded-full">
+
+              <h3
+                class="absolute -left-8 top-1/3 h-16 w-16 bg-green-800 grid place-items-center rounded-full text-white md:h-20 md:w-20 md:-left-10">
+                04</h3>
+
+            </div>
+            <h3>Mixed Sorts</h3>
+
+            <p>Enjoy the smooth, full-bodied flavor of Organic Colombian Coffee, perfectly balanced for a rich and
+              satisfying experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ~~~~~~~~~~~  FRAGRANCE  ~~~~~~~~~~ -->
+    <section id="fragrance">
+      <img src="/src/images/fragrance_01.jpg" alt="fragrance_image">
+
+      <div>
+        <img src="/src/images/fragrance_bg.png" alt="fragrance_image">
+
+        <div>
+          <h2>Unmatched</h2>
+
+          <h2>Fragrance in Each Sip</h2>
+
+          <p>Savor the bold richness of Organic Colombian Coffee, expertly crafted for a smooth and balanced flavor.
+            Each cup offers a deep, satisfying experience with a perfect hint of refinement.</p>
+
+          <button class="btn_secondary">
+            <span class="z-10">read more</span>
+          </button>
+        </div>
+      </div>
+      <img src="/src/images/Fragrance_02.jpg" alt="fragrance_image">
+
+
+    </section>
+
+  </main>
+
+
+
+
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

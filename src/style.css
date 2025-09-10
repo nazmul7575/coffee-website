@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+.lobster {
+	font-family: "Lobster", sans-serif;
+}
+
+section {
+	@apply py-24 md:py-32;
+}
+
+h1 {
+	@apply text-5xl font-bold md:text-7xl lg:text-[80px] xl:text-[100px];
+}
+
+h2 {
+	@apply text-3xl font-bold md:text-5xl;
+}
+
+h2 {
+	@apply text-2xl font-bold;
+}
+
+h3 {
+	@apply text-base font-bold sm:text-lg;
+}
+
+.container {
+	max-width: 100%;
+	margin-inline: auto;
+	padding-inline: 1rem;
+}
+
+.nav-link {
+	@apply text-xl font-bold duration-300 lg:text-base;
+}
+.nav-link:hover,
+.active {
+	@apply text-green-700;
+}
+
+.nav_icon_mobile li:hover {
+	@apply border-green-700 duration-300;
+}
+
+.nav_icon_mobile li:hover a {
+	@apply text-green-700 duration-300;
+}
+
+.nav_icons li:hover {
+	@apply border-white duration-300;
+}
+
+.nav_icons li:hover a {
+	@apply text-white duration-300;
+}
+
+.bg_hero {
+	background-image: url(./images/hero_bg.jpg);
+}
+
+.coffee_pattern {
+	background-image: url(./images/coffee_pattern.png);
+}
+
+.bg_image {
+	background-image: url("/src/images/bg_image.jpg");
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+.btn_primary,
+.btn_secondary {
+	@apply relative flex h-14 w-48 bg-green-800 items-center justify-center text-white uppercase shadow-2xl overflow-hidden transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-white before:duration-500 before:ease-out hover:text-black hover:before:h-60 hover:before:w-60;
+}
+
+.btn_secondary {
+	@apply bg-black;
+}
+
+.about__item__img img,
+.about__item__img h3 {
+	@apply cursor-pointer duration-300;
+}
+
+.about__item__img:hover img {
+	@apply rotate-45;
+}
+
+.about__item__img:hover h3 {
+	@apply scale-50;
+}
