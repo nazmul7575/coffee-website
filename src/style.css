@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+	@apply overflow-x-hidden scroll-smooth;
+}
+
 body {
 	font-family: "Poppins", sans-serif;
 }
@@ -43,23 +47,28 @@ h4 {
 }
 
 .nav_icon_mobile li:hover {
-	@apply border-green-700 duration-300;
+	@apply border-green-700 duration-300 cursor-pointer;
 }
 
-.nav_icon_mobile li:hover a {
+.nav_icon_mobile li a:hover {
 	@apply text-green-700 duration-300;
 }
 
 .nav_icons li:hover {
-	@apply border-white duration-300;
+	@apply border-white duration-300 cursor-pointer;
 }
 
-.nav_icons li:hover a {
-	@apply text-white duration-300;
+.nav_icons li a:hover {
+	@apply text-white border-white duration-300;
 }
 
 .bg_hero {
 	background-image: url(./images/hero_bg.jpg);
+	background-size: cover;
+}
+
+.bg_footer {
+	background-image: url(./images/footer_bg.jpg);
 	background-size: cover;
 }
 

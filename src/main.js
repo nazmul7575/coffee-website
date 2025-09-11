@@ -29,6 +29,45 @@ const scrollHeader = () => {
 		stickyMenu.classList.add("lg:top-[-100%]");
 		stickyMenu.classList.remove("bg-black/80");
 	}
+	z;
 };
 
 window.addEventListener("scroll", scrollHeader);
+
+const scrollUp = () => {
+	const scrollUpBtn = document.getElementById("scroll_up");
+	if (window.scrollY >= 250) {
+		scrollUpBtn.classList.remove("-bottom-1/2");
+		scrollUpBtn.classList.add("bottom-4");
+	} else {
+		scrollUpBtn.classList.add("-bottom-1/2");
+		scrollUpBtn.classList.remove("bottom-4");
+	}
+};
+
+window.addEventListener("scroll", scrollUp);
+
+const activeLink = () => {
+	const sections = document.querySelectorAll("section");
+	const navLinks = document.querySelectorAll(".nav-link");
+
+	let current = "home";
+
+	sections.forEach((section) => {
+		const sectionTop = section.offsetTop;
+
+		if (window.scrollY >= sectionTop - 60) {
+			current = section.getAttribute("id");
+		}
+	});
+
+	navLinks.forEach((item) => {
+		item.classList.remove("active");
+
+		if (item.href.includes(current)) {
+			item.classList.add("active");
+		}
+	});
+};
+
+window.addEventListener("scroll", activeLink);
